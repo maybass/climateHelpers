@@ -25,7 +25,7 @@ let opciones = {
 
 app.use(session({
 	//en secret deberia haber un process.env
-	secret: 'sarasa',//pongo lo q quiera, esto va a hacer un calculo para sacar el id 
+	secret:,//pongo lo q quiera, esto va a hacer un calculo para sacar el id 
 	resave : false,
 	saveUninitialized : false,
 	cookie : { maxAge : 300000 } // 5 minutos expire de sesion (ms) , tb se puede hacer c metodo touch
