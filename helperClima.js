@@ -4,22 +4,10 @@ const hbs = require('hbs')
 const express = require('express')
 const app = express()
 
-
-
-/*App name
-bass's App
-App ID
-36f156f4
-Key
-86d1a949500e44db48b1eafe3bbf1afd*/
-
-
-
-
 let temperatura;
 let sensacionTermica;
 
-axios.get('http://api.weatherunlocked.com/api/current/40.71,-74.00?app_id=36f156f4&app_key=86d1a949500e44db48b1eafe3bbf1afd')
+axios.get('http://api.weatherunlocked.com/api/current/40.71,-74.00?app_id=APP ID&app_key=APP KEY')
 .then((res)=> {
 	
 	temperatura = res.data.temp_c;
@@ -64,7 +52,7 @@ hbs.registerHelper('decidir' , (siOno) => {
 	} else if (temperatura <= 5) { //menor o igual a 5 
 		
 		return `${html} ${iconoNieve} ${htmlCierre}`
-	} else if (temperatura >=40) {
+	} else if (temperatura >=40) { //ESTA NO VA
 		return `${html} ${iconoNublado} ${htmlCierre}`
 		
 	} 
